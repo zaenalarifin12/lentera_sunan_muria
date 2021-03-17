@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::group(["middleware" => "auth"], function(){
     
     Route::get('/admin', "HomeController@index");
@@ -52,5 +53,8 @@ Route::get("/{name}",                       "FE\PageController@index");
 
 Auth::routes();
 
+Route::get('/artisan/storage', function () {
+    Artisan::call('storage:link');
+});
 
 
