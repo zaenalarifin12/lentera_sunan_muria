@@ -59,4 +59,12 @@ Route::get('/artisan/storage', function () {
     Artisan::call('storage:link');
 });
 
+Route::get('/artisan/clear-cache', function () {
+    Artisan::call('cache:clear');
+});
+
+Route::get('/artisan/config-clear', function () {
+    Artisan::call('config:clear');
+});
+
 
