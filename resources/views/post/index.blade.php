@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('style')
-    <link href="{{ asset("assets/vendor/datatables/dataTables.bootstrap4.min.css")}}" rel="stylesheet">    
+    <link href="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                 <div>
                     <h6 class="m-0 d-inline font-weight-bold text-primary">Postingan</h6>
 
-                    <a href="{{ url("/post/create") }}" class="btn btn-sm btn-success float-right">Tambah</a>
+                    <a href="{{ url('/post/create') }}" class="btn btn-sm btn-success float-right">Tambah</a>
                 </div>
 
 
@@ -33,7 +33,7 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        
+
                     </table>
                 </div>
             </div>
@@ -45,8 +45,8 @@
 
 @section('script')
     <!-- Page level plugins -->
-    <script src="{{ asset("assets/vendor/datatables/jquery.dataTables.min.js")}}"></script>
-    <script src="{{ asset("assets/vendor/datatables/dataTables.bootstrap4.min.js")}}"></script>
+    <script src="{{ asset('assets/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
     <script>
@@ -55,22 +55,49 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ url('post') }}",
+
+                order: [5, "desc"],
+
                 columns: [
-                   
-                    { data: 'title',    name: 'title' },
-                    { data: 'category_name',  name: 'category_name' },
-                    { data: 'see',      name: 'see' },
-                    { data: 'writer_name',  name: 'writer_name' },
-                    { data: 'publish',  name: 'publish' },
-                    { data: 'created_at',  name: 'created_at' },
-                    { data: 'action',  name: 'action',  orderable: false, searchable: false },
+
+                    {
+                        data: 'title',
+                        name: 'title'
+                    },
+                    {
+                        data: 'category_name',
+                        name: 'category_name'
+                    },
+                    {
+                        data: 'see',
+                        name: 'see'
+                    },
+                    {
+                        data: 'writer_name',
+                        name: 'writer_name'
+                    },
+                    {
+                        data: 'publish',
+                        name: 'publish'
+                    },
+                    {
+                        data: 'created_at',
+                        name: 'created_at'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
                 ]
             });
         });
+
     </script>
 
     <script>
-        $('.delete-confirm').on('click', function (event) {
+        $('.delete-confirm').on('click', function(event) {
             event.preventDefault();
             const url = $(this).attr('href');
             swal({
@@ -86,5 +113,6 @@
                 }
             });
         });
+
     </script>
 @endsection

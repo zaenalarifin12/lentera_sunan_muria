@@ -60,53 +60,15 @@
             </a>         
           @endforeach
      
-          <div class="my-2 flex justify-end">
+          {{-- <div class="my-2 flex justify-end">
             <button class="px-5 py-1 font-bold text-blue-600 text-xs rounded-full border-2 border-blue-600 
             
-            hover:bg-blue-600 hover:text-white">Kategori Lainnya</button>
-          </div>
+            hover:bg-blue-600 hover:text-white">Berita Lainnya</button>
+          </div> --}}
+          <br>
+          {{ $newest->links('vendor.pagination.simple-tailwind') }}
+          <br>
 
-
-
-          <div class="flex justify-start">
-            <p class="text-blue-900 font-bold">Berita Terbaru</p>
-          </div>
-
-          <hr class="pb-0.5 bg-blue-900" />
-
-          <div class="flex justify-between my-2">
-            <div class="w-4/12">
-                <img class="rounded-md" src="{{ asset("tailwind/assets/test.png")}}" />
-            </div>
-            
-            <div class="w-8/12 pl-1">
-              <p class="text-blue-900 text-base font-bold ">Dengan Alat Berat, Petugas Siap Angkut Sampah Selapangan Bola di Bekasi 7 jam yang lalu</p>
-              
-              <div class="flex justify-end">
-                <span class="text-sm text-yellow-700 font-bold">17 februari 2010</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex justify-between my-2">
-            <div class="w-4/12">
-                <img class="rounded-md" src="{{ asset("tailwind/assets/test.png")}}" />
-            </div>
-            
-            <div class="w-8/12 pl-1">
-              <p class="text-blue-900 text-base font-bold ">Dengan Alat Berat, Petugas Siap Angkut Sampah Selapangan Bola di Bekasi 7 jam yang lalu</p>
-              
-              <div class="flex justify-end">
-                <span class="text-sm text-yellow-700 font-bold">17 februari 2010</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="my-2 flex justify-end">
-            <button class="px-5 py-1 font-bold text-blue-600 text-xs rounded-full border-2 border-blue-600 
-            
-            hover:bg-blue-600 hover:text-white">Kategori Lainnya</button>
-          </div>
 
 
         </div>

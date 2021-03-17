@@ -41,7 +41,7 @@ class HomeController extends Controller
                     "posts.title",
                     "posts.publish"
                     )
-                ->get();
+                ->paginate(10);
 
         $newsPopuler = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
