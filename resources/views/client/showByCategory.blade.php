@@ -8,10 +8,10 @@
         <div class="w-full flex flex-wrap ">
 
             <div class="bg-yellow-500 rounded mr-3 my-2">
-                <a href={{ url('/') }} class="px-6 py-3 text-white text-lg font-medium">Home</a>
+                <a href={{ url('/') }} class="px-4 py-2 text-white text-sm">Home</a>
             </div>
             <div class="bg-blue-900 rounded mr-3 my-2">
-                <span class="px-6 py-3 text-white text-lg font-medium">{{ $category->name }}</span>
+                <span class="px-4 py-2 text-white text-sm">{{ $category->name }}</span>
             </div>
 
         </div>

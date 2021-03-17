@@ -13,12 +13,12 @@
         <div class="w-full flex flex-wrap ">
 
           <a href="{{ url("/") }}" class="bg-yellow-500 rounded mr-3 my-2">
-            <span class="px-6 py-3 text-white text-lg font-medium">Home</span>
+            <span class="px-4 py-2 text-white text-sm">Home</span>
           </a>
 
           @foreach ($categories as $item)
             <a href="{{ url("/posts/categories/{$item->uuid}") }}" class="bg-blue-900 rounded mr-3 my-2">
-              <span class="px-6 py-3 text-white text-lg font-medium">{{ $item->name }}</span>
+              <span class="px-4 py-2 text-white text-sm">{{ $item->name }}</span>
             </a>
           @endforeach
 

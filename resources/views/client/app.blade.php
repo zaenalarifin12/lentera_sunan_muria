@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lentera Sunan Muria</title>
+    <title>Lentera PMII UMK</title>
     <link rel="stylesheet" href="{{ asset("css/app.css") }}">
     <link rel="stylesheet" href="{{ asset("css/font.css") }}">
     <link rel="icon" href="{{ asset("tailwind/assets/logo.png") }}" type="image/gif" sizes="16x16">
@@ -24,6 +24,8 @@
               <i class="fa fa-2x fa-bars"></i>
             </a>
 
+            <p class="font-bold text-blue-900">Lentera PMII UMK</p>
+
             <h1 class="leading-none text-2xl text-grey-darkest">
               <a class="no-underline text-grey-darkest hover:text-black" href="#">
                 <img class="h-8" src="{{ asset("tailwind/assets/logo.png")}}"  />
@@ -35,12 +37,12 @@
           <!-- END Logo text or image -->
           
           
+
           <!-- Global navigation -->
           <nav class="hidden nav">
             <ul class="list-reset md:flex md:items-center">
               <li class="md:ml-4">
                 <a
-                
                 class="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
                   Profile
                 </a>
