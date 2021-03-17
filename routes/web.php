@@ -43,15 +43,17 @@ Route::group(["middleware" => "auth"], function(){
     Route::get("/writer/delete/{id}",       "WriterController@destroy");
 
 });
+
+
+
+Auth::routes();
+
 // client
 Route::get("/",                             "FE\HomeController@index");
 Route::get("/posts/{uuid}",                 "FE\HomeController@show");
 Route::get("/posts/categories/{uuid}",      "FE\HomeController@showByCategory");
 
 Route::get("/{name}",                       "FE\PageController@index");
-
-
-Auth::routes();
 
 Route::get('/artisan/storage', function () {
     Artisan::call('storage:link');
