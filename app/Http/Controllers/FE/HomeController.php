@@ -95,7 +95,7 @@ class HomeController extends Controller
 
         $news = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
-                // ->where("categories.uuid", $uuid)    
+                ->where("categories.uuid", $uuid)    
                 ->where("posts.active", 1)    
                 ->orderBy("publish", "DESC")
                 ->select(
