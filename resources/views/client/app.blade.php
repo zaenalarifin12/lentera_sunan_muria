@@ -63,7 +63,7 @@
               </li>
               <li class="md:ml-4">
                 <a
-                href="{{ url("/Berita Pergerakan") }}"
+                href="{{ url("/Kabar Kampus") }}"
                 class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
                   Kabar Kampus
                 </a>
@@ -100,7 +100,16 @@
 
             <div class="w-10/12 mx-auto">
                 <div>
-                    <p class="text-gray-50 my-2">Lentera PMII media adalah </p>
+                    <p class="text-gray-50 my-2">                      
+                      Lentera PMII UMK adalah media resmi yang dikelola oleh Pengurus Komisariat Pergerakan Mahasiswa Islam Indonesia Sunan Muria, Universitas Muria Kudus. Merangkum berbagai opini mahasiswa dan umum, serta menyajikan bahasan isu terbaru seputar pergerakan. 
+                    </p>
+                    
+                    <p class="text-gray-50 my-4">
+                      Kantor: <br> jl. gondangmanis rt. 3 rw. 11 kec.  bae kab. kudus
+                    </p>
+                    <div>
+                      <i class="fas fa-envelope text-blue-500"></i> <a class="text-yellow-300" href="mailto:pmiisunanmuriakudus@gmail.com">pmiisunanmuriakudus@gmail.com</a>
+                    </div>
                 </div>
         
             <div>
