@@ -14,6 +14,7 @@ class HomeController extends Controller
         $newestRole1 = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
                 ->where("categories.role", 1)    
+                ->where("posts.active", 1)    
                 ->orderBy("publish", "DESC")
                 ->take(5)
                 ->select(
@@ -31,7 +32,8 @@ class HomeController extends Controller
 
         $newest = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
-                ->where("categories.role", 0)    
+                ->where("categories.role", 0)  
+                ->where("posts.active", 1)    
                 ->orderBy("id", "DESC")
                 ->take(5)
                 ->select(
@@ -94,6 +96,7 @@ class HomeController extends Controller
         $news = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
                 // ->where("categories.uuid", $uuid)    
+                ->where("posts.active", 1)    
                 ->orderBy("publish", "DESC")
                 ->select(
                     "posts.uuid",

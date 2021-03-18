@@ -13,6 +13,7 @@ class KategoriController extends Controller
         $newest1 = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
                 ->where("categories.name", $request->name)    
+                ->where("posts.active", 1)    
                 ->orderBy("publish", "DESC")
                 ->select(
                     "posts.uuid",
@@ -27,6 +28,7 @@ class KategoriController extends Controller
         $newest1 = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
                 ->where("posts.uuid", $uuid)
+                ->where("posts.active", 1)    
                 ->orderBy("publish", "DESC")
                 ->select(
                     "posts.uuid",
