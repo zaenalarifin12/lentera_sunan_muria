@@ -78,6 +78,7 @@ class HomeController extends Controller
                 ->where("posts.uuid", $uuid)
                 ->select(
                     "posts.title",
+                    "posts.see",
                     "posts.image",
                     "posts.description",
                     "posts.publish",
@@ -89,7 +90,7 @@ class HomeController extends Controller
 
         if(empty($post)) abort(404);
 
-        DB::table("posts")->where("id", $post->see)->update([
+        DB::table("posts")->where("id", $uuid)->update([
             "see"   => $post->see + 1
         ]);
 
