@@ -89,6 +89,10 @@ class HomeController extends Controller
 
         if(empty($post)) abort(404);
 
+        $post->update([
+            "see"   => $post->see + 1
+        ]);
+
         return view("client.show", compact("post"));
     }
 
