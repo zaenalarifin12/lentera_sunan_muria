@@ -16,6 +16,7 @@ class PostController extends Controller
             $posts = DB::table("posts")
                     ->join("categories", "posts.category_id", "=", "categories.id")
                     ->join("writers", "posts.writer_id", "=", "writers.id")
+                    ->where("posts.active", 1)
                     ->orderBy("posts.created_at", "DESC")
                     ->select(
                         "posts.id",
