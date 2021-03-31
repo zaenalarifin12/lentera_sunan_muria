@@ -80,7 +80,7 @@ class PostController extends Controller
         );
 
         DB::table("posts")->insert([
-            "uuid"          => $request->title . "-" . date("Y-m-d"),
+            "uuid"          => str_slug($request->title, '-') . "-" . date("d-M-Y"),
             "image"         => $fileName,
             "title"         => $request->title,
             "description"   => $request->description,
