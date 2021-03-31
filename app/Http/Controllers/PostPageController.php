@@ -81,7 +81,7 @@ class PostPageController extends Controller
         );
 
         DB::table("posts")->insert([
-            "uuid"          => Str::uuid(),
+            "uuid"          => $request->title . "-" . date("Y-m-d"),
             "image"         => $fileName,
             "title"         => $request->title,
             "description"   => $request->description,
@@ -141,7 +141,6 @@ class PostPageController extends Controller
             );
 
             DB::table("posts")->where("id", $id)->update([
-                "uuid"          => Str::uuid(),
                 "image"         => $fileName,
                 "title"         => $request->title,
                 "description"   => $request->description,
@@ -153,7 +152,6 @@ class PostPageController extends Controller
         }else{
 
             DB::table("posts")->where("id", $id)->update([
-                "uuid"          => Str::uuid(),
                 "title"         => $request->title,
                 "description"   => $request->description,
                 "publish"       => $request->publish,

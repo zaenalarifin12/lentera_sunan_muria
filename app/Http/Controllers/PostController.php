@@ -140,7 +140,6 @@ class PostController extends Controller
             );
 
             DB::table("posts")->where("id", $id)->update([
-                "uuid"          => Str::uuid(),
                 "image"         => $fileName,
                 "title"         => $request->title,
                 "description"   => $request->description,
@@ -152,7 +151,6 @@ class PostController extends Controller
         }else{
 
             DB::table("posts")->where("id", $id)->update([
-                "uuid"          => Str::uuid(),
                 "title"         => $request->title,
                 "description"   => $request->description,
                 "publish"       => $request->publish,

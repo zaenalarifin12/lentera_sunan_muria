@@ -87,6 +87,8 @@ class HomeController extends Controller
                 )
                 ->first();
 
+        if(empty($post)) abort(404);
+
         return view("client.show", compact("post"));
     }
 
