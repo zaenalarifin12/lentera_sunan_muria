@@ -17,6 +17,7 @@ class PostController extends Controller
                     ->join("categories", "posts.category_id", "=", "categories.id")
                     ->join("writers", "posts.writer_id", "=", "writers.id")
                     ->where("posts.active", 1)
+                    ->where("categories.role", 0)
                     ->orderBy("posts.created_at", "DESC")
                     ->select(
                         "posts.id",
