@@ -82,7 +82,7 @@ class PostPageController extends Controller
         );
 
         DB::table("posts")->insert([
-            "uuid"          => str_slug($request->title, '-') . "-" . date("d-M-Y"),
+            "uuid"          => Str::slug($request->title, '-') . "-" . now(),
             "image"         => $fileName,
             "title"         => $request->title,
             "description"   => $request->description,
