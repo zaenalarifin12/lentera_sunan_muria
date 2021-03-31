@@ -81,7 +81,7 @@ class PostController extends Controller
         );
 
         DB::table("posts")->insert([
-            "uuid"          => Str::slug($request->title, '-') . "-" . now(),
+            "uuid"          => Str::slug($request->title, '-') . "-" . Str::slug(now(), '-'),
             "image"         => $fileName,
             "title"         => $request->title,
             "description"   => $request->description,
