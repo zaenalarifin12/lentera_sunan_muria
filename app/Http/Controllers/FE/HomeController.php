@@ -74,6 +74,7 @@ class HomeController extends Controller
         $post = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
                 ->join("writers", "posts.writer_id", "=", "writers.id")
+                ->where("posts.active", 1)  
                 ->where("posts.uuid", $uuid)
                 ->select(
                     "posts.title",
@@ -104,7 +105,7 @@ class HomeController extends Controller
                     "posts.title",
                     "posts.publish"
                     )
-                ->simplePaginate(2);;
+                ->simplePaginate(10);;
 
         return view("client.showByCategory", compact("news", "category"));
     }

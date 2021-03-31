@@ -16,7 +16,8 @@ class PageController extends Controller
 
         $news = DB::table("posts")
                 ->join("categories", "posts.category_id", "=", "categories.id")
-                ->where("categories.name", $name)    
+                ->where("categories.name", $name)   
+                ->where("posts.active", 1)   
                 ->orderBy("publish", "DESC")
                 ->select(
                     "posts.uuid",
@@ -24,7 +25,7 @@ class PageController extends Controller
                     "posts.title",
                     "posts.publish"
                     )
-                ->simplePaginate(2);;
+                ->simplePaginate(10);;
 
         return view("client.showByCategory", compact("news", "category"));
     }
