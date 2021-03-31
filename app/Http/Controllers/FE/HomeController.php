@@ -90,7 +90,7 @@ class HomeController extends Controller
 
         if(empty($post)) abort(404);
 
-        DB::table("posts")->where("id", $uuid)->update([
+        DB::table("posts")->where("uuid", $uuid)->update([
             "see"   => $post->see + 1
         ]);
 
