@@ -107,7 +107,9 @@ class HomeController extends Controller
                     "posts.title",
                     "posts.publish"
                     )
-                ->simplePaginate(10);;
+                ->simplePaginate(10);
+
+        if(empty($post)) abort(404);
 
         return view("client.showByCategory", compact("news", "category"));
     }
