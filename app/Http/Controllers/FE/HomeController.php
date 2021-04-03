@@ -114,7 +114,7 @@ class HomeController extends Controller
                     )
                 ->simplePaginate(10);
 
-        if(empty($post)) abort(404);
+        if(empty($category)) abort(404);
 
         return view("client.showByCategory", compact("news", "category"));
     }

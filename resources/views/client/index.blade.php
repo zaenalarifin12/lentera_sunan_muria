@@ -17,7 +17,7 @@
           </a>
 
           @foreach ($categories as $item)
-            <a href="{{ url("/posts/categories/{$item->uuid}") }}" class="bg-blue-900 rounded mr-3 my-2">
+            <a href="{{ url("/posts/categories/$item->uuid") }}" class="bg-blue-900 rounded mr-3 my-2">
               <span class="px-4 py-2 text-white text-sm">{{ $item->name }}</span>
             </a>
           @endforeach
